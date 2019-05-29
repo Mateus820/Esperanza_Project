@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 223dfad36e1f47d46b9f506ba4050e15
+guid: 556a29a512dec7a4cb9a3a0fa050088a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: UI_Play_0
+    21300000: Logo_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -32,7 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -107,21 +107,21 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Play_0
+      name: Logo_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 44
-        width: 110
-        height: 48
+        x: 20
+        y: 31
+        width: 691
+        height: 211
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b100f589a3c25504abc4d9796ea4e13b
+      spriteID: 81a2c8e7bb2acc64e885285f07e86542
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: dd6008cf5dbafa24ca2819c7c6929e39
+    spriteID: 13c56b3a1698e18429f73a732489618f
     vertices: []
     indices: 
     edges: []
