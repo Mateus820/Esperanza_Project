@@ -5,10 +5,10 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Coleta : MonoBehaviour 
+public class Collect : MonoBehaviour 
 {
-	public Text ponto = null;
-	public int contador = 0;
+	public Text ponto;
+	public int contador;
     public AudioSource coleta;
 
     void OnTriggerEnter2D (Collider2D other)

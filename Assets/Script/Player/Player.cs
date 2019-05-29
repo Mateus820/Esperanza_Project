@@ -4,18 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Movimentacao : MonoBehaviour {
+public class Player : MonoBehaviour {
 
 	public float movH;	
 	public float movV;	
 	public float speed;
 	public Rigidbody2D rb2d;
 
-	 void FixedUpdate()
-    {
-        Movimento();
+	void FixedUpdate(){
+        Moviment();
     }
-    void Movimento()
+
+    void Moviment()
     {
 		movH = Input.GetAxis ("Horizontal") * speed;
 		movV = Input.GetAxis ("Vertical") * speed;
