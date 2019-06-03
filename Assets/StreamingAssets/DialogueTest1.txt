@@ -1,0 +1,2 @@
+﻿Ana/Olá, este é um exemplo do código de dialogo@
+Ana/Você usa este padrão "Nome/Fala", ok?
