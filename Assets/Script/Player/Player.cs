@@ -6,10 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
-	public float movH;	
-	public float movV;	
-	public float speed;
-	public Rigidbody2D rb2d;
+	[SerializeField] private float speed;
+	[SerializeField] private Rigidbody2D rb;
 
 	void FixedUpdate(){
         Moviment();
@@ -17,10 +15,9 @@ public class Player : MonoBehaviour {
 
     void Moviment()
     {
-		movH = Input.GetAxis ("Horizontal") * speed;
-		movV = Input.GetAxis ("Vertical") * speed;
-
-		Vector2 mov = new Vector2 (movH, movV);
-		rb2d.velocity = mov;
+		float movH = Input.GetAxis ("Horizontal") * speed;
+		float movV = Input.GetAxis ("Vertical") * speed;
+		
+		rb.velocity = new Vector2 (movH, movV);
     }
 }
