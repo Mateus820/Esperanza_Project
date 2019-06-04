@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
+	[Header("Move")]
 	[SerializeField] private float speed;
 	[SerializeField] private Rigidbody2D rb;
+
+	[SerializeField] private PlayerStats ps;
 
 	void FixedUpdate(){
         Moviment();
@@ -20,4 +23,10 @@ public class Player : MonoBehaviour {
 		
 		rb.velocity = new Vector2 (movH, movV);
     }
+
+	void OnCollisionEnter2D(Collision2D other) {
+		if(other.gameObject.tag == "Enemy"){
+			ps.DecrementLife(10);
+		}	
+	}
 }
