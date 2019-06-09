@@ -7,27 +7,21 @@ using UnityEngine.SceneManagement;
 
 public class Collect : MonoBehaviour 
 {
-	public Text ponto;
-	public int contador;
-    public AudioSource coleta;
+
+	[SerializeField] private Inventory inventory;
 
     void OnTriggerEnter2D (Collider2D other)
 	{
-       
-
-		if (other.tag == "Comida")
-		{
-            contador++;
-            Destroy(other.gameObject);
-            ponto.text = "" + contador;
-            coleta.Play();
-			Destroy (other.gameObject);
-			ponto.text = "" + contador;
+		if(other.gameObject.tag == "Water"){
+			inventory.AddItem(0, 1);
 		}
-		if ( contador == 244)
+		else if (other.gameObject.tag == "Remedy")
 		{
-			SceneManager.LoadScene ("Vitória");
+			inventory.AddItem(1, 1);
 		}
-
+		else if(other.gameObject.tag == "Food")
+		{
+			inventory.AddItem(2, 1);
+		}
     }
 }
