@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour {
 
@@ -22,8 +23,8 @@ public class Player : MonoBehaviour {
 
   void Moviment()
   {
-		float movH = Input.GetAxisRaw("Horizontal") * speed;
-		float movV = Input.GetAxisRaw("Vertical") * speed;
+		float movH = CrossPlatformInputManager.GetAxisRaw("Horizontal") * speed;
+		float movV = CrossPlatformInputManager.GetAxisRaw("Vertical") * speed;
 		
 		rb.velocity = new Vector2 (movH, movV);
 
